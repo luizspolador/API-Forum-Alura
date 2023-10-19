@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "89d446df-59fe-4883-b3b2-870f138ddb59",
+		"name": "API Forum Alura",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26935506"
+	},
+	"item": [
+		{
+			"name": "obter topicos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url-inicial}}/topicos",
+					"host": [
+						"{{url-inicial}}"
+					],
+					"path": [
+						"topicos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obter topico por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url-inicial}}/topicos/2",
+					"host": [
+						"{{url-inicial}}"
+					],
+					"path": [
+						"topicos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscando por id inexistente - erro 404",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url-inicial}}/topicos/22",
+					"host": [
+						"{{url-inicial}}"
+					],
+					"path": [
+						"topicos",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletar topico por id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url-inicial}}/topicos/5555",
+					"host": [
+						"{{url-inicial}}"
+					],
+					"path": [
+						"topicos",
+						"5555"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletar topico por id inexistente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url-inicial}}/topicos/5555",
+					"host": [
+						"{{url-inicial}}"
+					],
+					"path": [
+						"topicos",
+						"5555"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar topico por id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"titulo\":\"Atualizado\",\r\n   \"mensagem\":\"Mensagem nova\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url-inicial}}/topicos/2",
+					"host": [
+						"{{url-inicial}}"
+					],
+					"path": [
+						"topicos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionando topicos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en-US",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\":\"NodeJS\",\r\n        \"mensagem\":\"Texto da mensagem\",\r\n        \"nomeCurso\":\"NodeJS\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url-inicial}}/topicos",
+					"host": [
+						"{{url-inicial}}"
+					],
+					"path": [
+						"topicos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
